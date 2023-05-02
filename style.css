@@ -1,0 +1,1022 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&family=Caveat:wght@400;500;600;700&family=Lobster&family=Pacifico&family=Satisfy&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    user-select: none;
+    scroll-behavior: smooth;
+    color: #fff;
+    font-family: 'Alkatra', cursive;    
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+body{
+    overflow-x: hidden;
+}
+.container{
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* ---------------------style for welcome-page--------------------- */
+.welcome {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    color: #ffff;
+    font-size: xx-large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url("https://live.themefic.com/html-templates/cafetora/Black/assets/img/intro-bg.jpg");
+    background-repeat: space;
+}
+.welcome::before{
+    content: '';
+    position: absolute;
+    background-color: #000;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    color: #111010;
+    opacity: 0.65;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcomedata hr{
+    height: 5px;
+    background-color: #fff;
+    width: auto;
+}
+.welcomedata{
+    position: relative;
+    
+}
+.greet{
+    font-family: 'Pacifico', cursive;
+    font-size: 4.5rem;
+    width: 43%;
+    text-align: center;
+}
+.greetdis{
+font-family: 'Caveat', cursive;
+    font-size: 1.5rem;
+    width: 43%;
+}
+.welcomebtn{
+    font-family: 'Caveat', cursive;
+    display:grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+    font-size: 2rem;
+    margin-top: 10px;
+}
+.welcomebtn *{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.btns{
+    width: 72%;
+}
+.btns *{
+    width:100%;
+}
+.learnmore {
+    text-align: center;
+    color: white;
+    background: red;
+    background: linear-gradient(to left, rgb(236, 0, 0) 50%, rgb(255, 255, 255) 50%) right;
+    background-size: 200%;
+    transition: .3s ease-out;
+}
+.learnmore * {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.learnmore:hover {
+    background-position: left;
+    color: #ff0000;    
+}
+.learnmore:hover a{
+    color: #ff0000;
+}
+.reserve {
+    text-align: center;
+    background: white;
+    background: linear-gradient(to left, rgb(255, 255, 255) 50%, rgb(236, 0, 0)  50%) right;
+    background-size: 200%;
+    margin-left: 20px;
+    transition: .3s ease-out;
+}
+.reserve * {
+    color: red;
+    text-decoration: none;
+}
+.reserve:hover {
+    background-position: left;
+    color: white;
+}
+.reserve:hover a {
+    color: #ffffff;
+}
+
+/* ---------------------style for header--------------------- */
+.main{
+    position: relative;
+    background-color: #000;
+}
+.header{
+    position: fixed;
+    width: 100%;
+    display: grid;
+    top: 0px;
+    height:auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    font-size: x-large;
+    color: white;
+    background:rgba(0, 0, 0, .9);
+    border-bottom: 2px solid #e70000;
+    z-index: 9;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: bolder;
+    font-family:'Satisfy', cursive;
+}
+.logo img{
+    height: 70px;
+    width: 70px;
+}
+.navigation{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+}
+.navigation ul{
+   display: flex;
+   column-gap: 30px;
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+}
+.navigation a {
+    font-family: 'Lobster', cursive;
+    text-decoration: none;
+    color: white;
+
+}
+.navigation li{
+    font-family: 'Lobster', cursive;
+    text-decoration: none;
+    position: relative;
+
+}
+.navigation li::before{
+    content: "";
+    width:100%;
+    height: 7px;
+    left: 0px;
+    top: -20px;
+    position:absolute;
+    text-decoration: none;
+    transition: .3s ease-in-out;
+    transform: scaleX(0);
+}
+.navigation li::after {
+    content: "";
+    width: 100%;
+    height: 7px;
+    left: 0px;
+    bottom: -20px;
+    position: absolute;
+    text-decoration: none;
+    transition: .3s ease-in-out;
+    transform: scaleX(0);
+}
+.navigation li:hover::before{
+    transform: scaleX(1);
+    background-color: red;
+}
+.navigation li:hover::after {
+    transform: scaleX(1);
+    background-color: red;
+}
+.display-menu,.navigation1{
+    display: none;
+}
+
+/* ---------------------style for Menu --------------------- */
+.menu{
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: auto;
+    background-color: #000;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin: 50px 0px;
+    padding-top: 30px;
+}
+
+ 
+ .subbreakfast,.sublunch,.subdinner{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 15px;
+    padding: 20px 40px;
+    flex: 0 0 auto;
+ }
+ 
+ .menu img{
+    height: 70px;
+    width: 70px;
+    border: 2px solid white;
+    border-radius: 35px;
+    
+ }
+ .foodDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 250px;
+ }
+.ourmenu{
+    margin: 40px 0px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    opacity: 0.9;
+    font-family: 'Alkatra', cursive;
+}
+.ourmenu h2{
+    margin-bottom: -20px;
+}
+.ourmenu-underline{
+    height: 8px;
+    width: 120px;
+    background-color: rgb(216, 2, 2);
+}
+.menu-btn{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+}
+.menu-btn button{
+    border: none;
+    margin: 10px;
+    height: 50px;
+    width: 150px;
+    font-size: large;
+    font-family: 'Alkatra', cursive;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background: red;
+    background: linear-gradient(to left, rgb(236, 0, 0) 50%, rgb(104, 103, 103) 50%) right;
+    background-size: 200%;
+    transition: .3s ease-out;
+}
+        
+.menu-btn button:hover {
+    background-position: left;
+}
+.slider {
+    width: 100%;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+}
+.outercontainer{
+    width: 45vw;
+    height: auto;
+    display: flex;
+    justify-content:  center ;
+}
+.menu-slider{
+    display: flex;
+    overflow: scroll;
+    width: fit-content;
+    justify-content: flex-start;
+    flex: 1 1 0;
+}
+.menu-slider::-webkit-scrollbar{
+    display: none;
+}
+
+.breakfast,
+.lunch,
+.dinner {
+    display: grid;
+    grid-template-columns: auto auto;
+    
+    width: 100%;
+}
+.description{
+    text-align:center ;
+}
+
+/* ---------------------style for Gallery --------------------- */
+.gallery{
+    height: auto;
+    width: 100%;
+    display:flex;
+    flex-direction:column;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    background-color: #2e2d2d;
+    padding-top: 30px;
+}
+.heading {
+    margin: 60px 0px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    color: #fff;
+    font-family: 'Alkatra', cursive;
+}
+
+.our-gallery h2 {
+    margin-bottom: -20px;
+}
+.images {
+    width: 99vw;
+    list-style: none;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+ .images img {
+     border-radius: 5px;
+     cursor: pointer;
+     transition: 0.3s;
+     width: 25vw;
+ }
+
+ .images img:hover {
+     opacity: .6;
+ }
+
+ #image-viewer {
+     display: none;
+     justify-content: center;
+     align-items: center;
+     position: fixed;
+     z-index: 20;
+     padding-top: 100px;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     overflow: auto;
+     outline: 3px solid red;
+     color: #ffffff;
+     background-color: rgba(0, 0, 0, .9);
+     scroll-behavior: unset;
+ }
+
+ .modal-content {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     margin: 0;
+ }
+
+ .modal-content img {
+     margin: auto;
+     display: block;
+     width: 100%;
+     max-width: 1000px;
+     border: 3px solid #ffffff;
+     border-radius: 5%;
+     animation-name: zoom;
+     animation-duration: 0.6s;
+ }
+
+ @keyframes zoom {
+     from {
+         transform: scale(0)
+     }
+
+     to {
+         transform: scale(1)
+     }
+ }
+
+ #image-viewer .close,
+ .moovleft,
+ .moovright {
+     font-family: 'Courier New', Courier, monospace;
+     position: absolute;
+     color: #fff9f9;
+     font-size: 50px;
+     width: fit-content;
+     font-weight: bold;
+     transition: 0.3s;
+ }
+
+ .moovleft,
+ .moovright {
+     text-align: center;
+     top: 50%;
+     ;
+     border-radius: 50%;
+     background-color: #ff0000;
+ }
+
+ .moovleft {
+     left: 115px;
+
+ }
+
+ .moovright {
+
+     right: 115px;
+ }
+
+ .quit {
+     right: 35px;
+     font-size: 30px;
+     top: 30px;
+ }
+
+ .close:hover {
+     opacity: .6;
+ }
+
+ .close:active {
+     opacity: 0;
+ }
+
+ #image-viewer .close:hover,
+ #image-viewer .close:focus {
+     color: #505050;
+     text-decoration: none;
+     cursor: pointer;
+ }
+
+ .hr {
+     display: none;
+ }
+
+/* ---------------------style for About_us --------------------- */
+.aboutcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.aboutcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+}
+.about{
+    margin: 10px;
+    padding: 10px; 
+}
+.aboutimage{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 35%;
+    gap: 10px;
+    color: #fff;
+}
+
+.aboutimage img {
+    height: 280px;
+    width: 250px;
+    transition: .3s all ease-in-out
+}
+
+.aboutimage img:hover {
+    height: 400px;
+    width: 350px;
+    border: 5px solid white;
+}
+.story-img {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Alkatra', cursive;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: #ffffff;
+    opacity: .8;
+    transition: .9s all ease-in-out
+}
+.story-img:hover{
+    opacity: 1;
+}
+.story{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15px;
+    width: 65%;
+}
+.story h3{
+    font-size: 2rem;
+    font-family: 'Pacifico', cursive;
+    padding: 10px;
+    color: #fff;
+}
+.story p{
+    padding: 10px;
+    color: #fff;
+}
+
+
+/* ---------------------style for Booking --------------------- */
+.booking{
+    background: #252222;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    padding-bottom: 70px;
+    height: auto;
+}
+.bookingdiv{
+    min-width: 1200px;
+}
+.opentimeheader{
+    font-family: 'Alkatra', cursive;
+    font-size:2rem;
+    margin-top: -22px;
+    margin-left: 50px;
+}
+.bookingcontainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    margin: 0;
+    padding: 50px;
+    border: 1px dashed red;
+}
+table{
+    font-size: 1.3rem;
+    border-spacing: 50px 12.3px;
+}
+
+.dayAndTime tr{
+    display: table-row;
+    flex-direction: column;
+    
+}
+.Reservation{
+    font-size: 2rem;
+    font-family: 'Alkatra', cursive;
+}
+.bookform,.opentime {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Alkatra', cursive;
+}
+.booking form{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.foamdata{
+        margin-bottom: 28.5px;
+        width: 18vw;     
+        width: 100%;
+}
+.foamdata1{
+    margin-bottom: 18.5px;
+     width: 100%;
+    resize: none;
+}
+
+.foamdata input,#food,
+#Members{
+    width: 100%;
+    font-family: 'Alkatra', cursive;
+    padding: 10px;
+    height: 50px;
+    color: #797777;
+}
+#extra{
+font-family: 'Alkatra', cursive;
+height: 80px;
+padding: 10px;
+}
+.foodtype{
+   width: 100%; 
+   font-size: 1.3rem;
+   accent-color: red;
+   display: flex;
+   align-items: center;
+}
+.formright,.formleft{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#submit input{
+    width: 100%;
+    background-color: #e70000;
+    color: #fff;
+    font-size: 1.3rem;
+    transition:  .5s ease-out; 
+    border: none;
+}
+#submit input:hover{
+     background: #727272 ; 
+}
+
+#submit :active {
+    border-style: outset; 
+    border: none;
+}
+
+
+/* ---------------------style for Contact-us --------------------- */
+.contact-us,.contact-container {
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 20px;
+    padding: 30px;
+}
+.contact-container{
+    width: 64%;
+    outline: 2px solid goldenrod;
+}
+.contact , .mode{
+    color: #ffffff;
+    display: inline;
+}
+.contact p:hover,
+.mode:hover,.contact img:hover{
+    color: #cacaca;
+    opacity: .6;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+margin: 0px 30px;
+}
+.contact h1{
+    margin-bottom: 30px;
+}
+.contact li,.contact h2{
+    list-style: none;
+    margin: 10px 0px;
+}
+.contact img {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+}
+.contact a,.social ul {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.social img{
+    border-radius: 50%;
+
+}
+
+/* ---------------------style for Footer--------------------- */
+footer{
+    background-color: #3f3e3e;
+    border: 1px 0px solid #fffcfc;
+    display: flex;
+    justify-content:space-around;
+    padding: 10px 0px;
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+
+#myBtn:hover {
+    background-color: #555;
+}
+/* ---------------------Media Quaries--------------------- */
+ @media (min-width: 1570px) {
+     .outercontainer {
+         width: 35vw;
+     }
+ }
+
+
+@media (min-width: 2027px){
+    .outercontainer{
+    width: 30vw;
+    }   
+}
+
+
+@media (max-width: 2027px) {
+   
+    .aboutcenter{
+        flex-direction: column;
+    }
+    .aboutimage{
+        height: 43.90779363336992vh;
+    }
+    .aboutimage img {
+        height: 30.735455543358945vh;
+        width: 23.020833333333334vw;
+    }
+    
+    .aboutimage img:hover {
+        height: 43.90779363336992vh;
+        width: 30.229166666666668vw;
+        border: 5px solid white;
+    }
+    .story{
+        margin-top:20px ;
+        width: 80%;
+        text-align: justify;
+    }
+    .modal-content{
+        width: 50%;
+    }
+    .moovleft{
+        left: 0px;
+    }
+    .moovright {
+        right: 0px;
+    }
+}
+
+/* ---------------------Media Quaries for tab and laptops--------------------- */
+@media(max-width:1350px){
+    .outercontainer{
+        width: 53vw;
+    }
+    .greet{
+        font-size: 3rem;
+    }
+}
+
+
+@media(max-width:1140px) {
+    .outercontainer {
+        width: 65vw;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .bookingdiv {
+        min-width: 200px;
+    }
+
+    .bookingcontainer {
+
+        flex-direction: column;
+    }
+
+    .contact-container {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .contact h1 {
+        margin-top: 40px;
+        margin-bottom: 0px;
+    }
+
+    .hr {
+        margin-top: 20px;
+        margin-bottom: -20px;
+        display: block;
+        background-color: #fff;
+    }
+
+    .opentime {
+        align-items: center;
+    }
+}
+
+/* ---------------------Media Quaries for tablets--------------------- */
+@media (max-width: 995px) {
+    .images {
+        list-style: none;
+        display: grid;
+        grid-template-columns: auto auto;
+        width: 90%;
+        margin-bottom: 40px;
+    }
+    .greet{
+        font-size: 2rem;
+    }
+    .greetdis{
+        font-size: 1rem;
+    }
+    .welcomebtn *{
+        font-size: 1.5rem;
+    }
+
+    .images img {
+        width: 100%;
+    }
+    .outercontainer {
+        width: 70vw;
+    }
+    .header {
+        font-size:medium ;
+    }
+    .logo{
+        font-size: large;
+    }
+
+}
+
+/* ---------------------Media Quaries for Mobile--------------------- */
+@media(max-width: 470px) {
+    .booking form {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        
+    }.Reservation{
+        margin-bottom: -20px;
+    }
+        .bookingcontainer{
+            align-items: center;
+        }
+        .formright{
+            margin-top: -20px;
+        }
+        .formleft{
+            padding-top: 30px;
+        }
+        .foamdata,.foamdata1{
+            margin-bottom: 20px;
+        }
+    .opentimeheader{
+        margin: 0;
+    }
+    .opentime{
+        align-items: center;
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+    table {
+        font-size: 1rem;
+        border-spacing: 40px 10px;
+    }
+    .aboutcenter{
+        width: 100%;
+        }
+    .aboutimage {
+        height: 600px;
+        width: 100%;
+        flex-direction: column;
+    }
+        
+    .aboutimage img {
+        height: 200px;
+        width:200px ;
+    }
+        
+    .aboutimage img:hover {
+        height: 300px;
+
+        width: 100%;
+        border: 5px solid white;
+    }
+    .story h3{
+        font-size: 1.5rem;
+    }
+    .story{
+        font-size: 0.5rem;
+    }       
+}
+
+
+@media(max-width:800px){
+    .breakfast,
+    .lunch,
+    .dinner {
+        display : grid;
+        grid-template-columns: auto;
+        width: 100%;
+        font-size: .7rem;
+    }
+    .outercontainer{
+        width: 350px;
+    }
+    .subbreakfast,
+    .sublunch,
+    .subdinner{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .foodDetails{
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+    }
+}
+
+
+@media (max-width:556px) {
+    .disply-menu{
+        position: absolute;
+        right: 5px;
+    }
+    .navigation ul{
+        display: none;
+    }
+    .navigation1{
+        position: absolute;
+        top:75px;
+        right: 5px;
+        width: 100%;
+        z-index: 11;
+    }
+    .navigation1,.menu-open  {
+        list-style-type: none;
+        background: rgba(0, 0, 0, 1);
+        font-size: 1rem;
+
+    }    
+    .navigation1 div{
+        border-bottom: 1px solid #ffffff;
+        text-align: center;
+        padding: 20px 0px;
+    }
+    .navigation1  a{
+        text-decoration: none;
+
+    }
+    .menu-close,.navigation1{
+        display: none;
+    }
+    .greet {
+            font-size: 1.5rem;
+    }   
+    .greetdis {
+        font-size: .9rem;
+    }
+        
+    .welcomebtn * {
+        font-size: 1rem;
+    }
+    .active{
+        display: block;
+    }
+
+}
